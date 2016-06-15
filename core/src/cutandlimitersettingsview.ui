@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CutAndLimiterSettingsView</class>
+ <widget class="QWidget" name="CutAndLimiterSettingsView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>326</width>
+    <height>383</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cut and Limiter Settings</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="formLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>301</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="injectionRPMDisableLabel">
+       <property name="text">
+        <string>Injection RPM Disable</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="injectionRPMDisableLineEdit"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="injectionRPMEnableLabel">
+       <property name="text">
+        <string>Injection RPM Enable</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="injectionRPMEnableLineEdit"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="ignitionRPMDisableLabel">
+       <property name="text">
+        <string>Ignition RPM Disable</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="ignitionRPMDisableLineEdit"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="ignitionRPMEnableLabel">
+       <property name="text">
+        <string>Ignition RPM Enable</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="ignitionRPMEnableLineEdit"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="boostCutDisableLabel">
+       <property name="text">
+        <string>Boost Cut KPA Disable</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="boostCutDisableLineEdit"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="boostCutEnableLabel">
+       <property name="text">
+        <string>Boost Cut KPA Enable</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="boostCutEnableLineEdit"/>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="twoStepRPMDisableLabel">
+       <property name="text">
+        <string>Two Step RPM Disable</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="twoStepRPMDisableLineEdit"/>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="twoStepRPMEnableLabel">
+       <property name="text">
+        <string>Two Step RPM Enable</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="twoStepRPMEnableLineEdit"/>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="twoStepRetardRPMThresholdLabel">
+       <property name="text">
+        <string>Two Step Retard RPM Threshold</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLineEdit" name="twoStepRetardRPMThresholdLineEdit"/>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="twoStepIgnitionTimingLabel">
+       <property name="text">
+        <string>Two Step Ignition Timing</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QLineEdit" name="twoStepIgnitionTimingLineEdit"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="saveToFlashButton">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>310</y>
+      <width>89</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save to Flash</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

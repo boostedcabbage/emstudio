@@ -43,3 +43,6 @@ object_script.emstudio.*
 *.png
 *.zip
 
+.cproject
+.project
+plugins/freeems

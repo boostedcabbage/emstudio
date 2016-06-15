@@ -89,6 +89,8 @@ SOURCES += src/main.cpp\
     src/xbytearray.cpp \
     src/commands.cpp \
     src/rawdataview.cpp \
+    src/cutandlimitersettingsview.cpp \
+		src/nitroussettingsview.cpp \
     src/gaugeview.cpp \
     src/emsinfoview.cpp \
     src/flagview.cpp \
@@ -133,6 +135,8 @@ HEADERS  += src/mainwindow.h \
     src/xbytearray.h \
     src/commands.h \
     src/rawdataview.h \
+    src/cutandlimitersettingsview.h \
+		src/nitroussettingsview.h \
     src/gaugeview.h \
     src/emsinfoview.h \
     src/flagview.h \
@@ -181,6 +185,8 @@ FORMS    += src/mainwindow.ui \
     src/rawdatadisplay.ui \
     src/dataflags.ui \
     src/rawdataview.ui \
+    src/cutandlimitersettingsview.ui \
+		src/nitroussettingsview.ui \
     src/tableview2d.ui \
     src/packetstatusview.ui \
     src/aboutview.ui \

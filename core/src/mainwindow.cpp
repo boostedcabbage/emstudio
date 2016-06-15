@@ -31,6 +31,8 @@
 #include "QsLog.h"
 #include "wizardview.h"
 #include "tableviewnew3d.h"
+#include "cutandlimitersettingsview.h"
+#include "nitroussettingsview.h"
 #define define2string_p(x) #x
 #define define2string(x) define2string_p(x)
 
@@ -900,6 +902,36 @@ void MainWindow::createView(unsigned short locid,DataType type)
 		QApplication::postEvent(win, new QEvent(QEvent::Show));
 		QApplication::postEvent(win, new QEvent(QEvent::WindowActivate));
 	}
+	else if(locid == 0xC004) { //Cut and Limiter Settings
+		RawData *data = emsComms->getRawData(locid);
+		CutAndLimiterSettingsView *view = new CutAndLimiterSettingsView(!data->isFlashOnly(),true);
+		connect(view,SIGNAL(destroyed(QObject*)),this,SLOT(rawDataViewDestroyed(QObject*)));
+		view->setData(locid,data);
+
+		QMdiSubWindow *win = ui.mdiArea->addSubWindow(view);
+		connect(win,SIGNAL(destroyed(QObject*)),this,SLOT(rawDataViewDestroyed(QObject*)));
+		//win->setWindowTitle("Ram Location 0x" + QString::number(locid,16).toUpper());
+		win->setGeometry(0,0,((view->width() < this->width()-160) ? view->width() : this->width()-160),((view->height() < this->height()-100) ? view->height() : this->height()-100));
+		m_rawDataView[locid] = view;
+		win->show();
+		QApplication::postEvent(win, new QEvent(QEvent::Show));
+		QApplication::postEvent(win, new QEvent(QEvent::WindowActivate));
+	}
+	else if(locid == 0xC005) { //Nitrous Settings
+			RawData *data = emsComms->getRawData(locid);
+			NitrousSettingsView *view = new NitrousSettingsView(!data->isFlashOnly(),true);
+			connect(view,SIGNAL(destroyed(QObject*)),this,SLOT(rawDataViewDestroyed(QObject*)));
+			view->setData(locid,data);
+
+			QMdiSubWindow *win = ui.mdiArea->addSubWindow(view);
+			connect(win,SIGNAL(destroyed(QObject*)),this,SLOT(rawDataViewDestroyed(QObject*)));
+			//win->setWindowTitle("Ram Location 0x" + QString::number(locid,16).toUpper());
+			win->setGeometry(0,0,((view->width() < this->width()-160) ? view->width() : this->width()-160),((view->height() < this->height()-100) ? view->height() : this->height()-100));
+			m_rawDataView[locid] = view;
+			win->show();
+			QApplication::postEvent(win, new QEvent(QEvent::Show));
+			QApplication::postEvent(win, new QEvent(QEvent::WindowActivate));
+		}
 	else
 	{
 		//Unhandled data type. Show it as a hex view.
